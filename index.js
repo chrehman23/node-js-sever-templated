@@ -1,7 +1,14 @@
 let express = require("express");
+let path = require("path");
+let cors = require('cors');
 
 const app = express();
 const port = 9000;
+
+app.use(cors({ credentials: true }));
+app.use(express.json({ limit: "500mb", type: "application/json" }));
+app.use(express.urlencoded({ limit: "500mb", extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/v1/app", require("./src/api/api.v1"));
 
