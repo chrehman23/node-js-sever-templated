@@ -1,15 +1,15 @@
 {
-  "name": "my-server",
+  "name": "express-vercel-demo",
   "version": "1.0.0",
-  "description": "A basic Node.js server with Express",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js","type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
-  "author": "Your Name",
-  "license": "MIT"
+    "express": "^4.17.3"
+  }
 }
