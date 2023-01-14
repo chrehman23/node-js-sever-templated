@@ -24,6 +24,6 @@ let appServices = (module.exports = {
     count++
   },
   getCount: () => {
-    return { transactionHash, count }
+    return { count }
   }
 });
