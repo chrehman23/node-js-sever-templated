@@ -1,4 +1,5 @@
 {
+    "buildCommand": "npm install && npm run start",
     "version": 2,
     "build": [
         {
