@@ -20,4 +20,12 @@ module.exports = {
             });
         }
     },
+    getCount: async (req, res) => {
+        let result = await appServices.getCount();
+        return res.status(200).json({
+            error: false,
+            data: result,
+            msg: "count",
+        });
+    },
 }

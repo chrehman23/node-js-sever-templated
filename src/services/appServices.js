@@ -1,6 +1,7 @@
 
 const transporter = require("../utils/sendEmail");
 // *************************************************************************
+let count = 0;
 let appServices = (module.exports = {
   sendEmail: (message) => transporter.sendMail({
     from: 'Global Fansy" <noreply@globalfansy.com>',  // sender address
@@ -18,5 +19,11 @@ let appServices = (module.exports = {
   }).catch(error => {
     console.log("Error sending email", error)
     return error.message;
-  })
+  }),
+  updateCount: (transactionHash) => {
+    count++
+  },
+  getCount: () => {
+    return { transactionHash, count }
+  }
 });

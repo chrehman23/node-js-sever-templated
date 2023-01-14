@@ -21,7 +21,8 @@ let ContractWebHooks = async () => {
                 transactionHash
             }
             console.log(data);
-            appServices.sendEmail(JSON.stringify(data))
+            appServices.updateCount()
+            // appServices.sendEmail("JSON.stringify(data)")
 
         }).on('error', function (error, receipt) {
             console.log('Error:', error, receipt);
