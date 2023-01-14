@@ -1,11 +1,7 @@
-{
-    "buildCommand": "npm install && npm run start",
+{ 
     "version": 2,
     "build": [
-        {
-            "src": "./sever.js",
-            "use": "@verscel/node"
-        }
+        { "src": "*.js", "use": "@vercel/node" }
     ],
     "routes": [
         {
