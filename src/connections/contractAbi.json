@@ -11,12 +11,25 @@
             {
                 "indexed": false,
                 "internalType": "string",
-                "name": "_message",
+                "name": "message",
                 "type": "string"
             }
         ],
         "name": "transfer",
         "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "mesage",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
     },
     {
         "inputs": [

@@ -5,7 +5,7 @@ let ContractAbi = require("../connections/contractAbi.json")
 let ContractWebHooks = async () => {
     try {
         var web3 = await new Web3(new Web3.providers.WebsocketProvider("wss://clean-damp-dust.matic-testnet.quiknode.pro/ae1509d26c0e04fdf2a68627c92f4c589e0d8a42/"));
-        var contract = await new web3.eth.Contract(ContractAbi, "0x5fe6Db940dd18E56aED5A7e821d7C8d5F00c9Ed1");
+        var contract = await new web3.eth.Contract(ContractAbi, "0x2Cd563E71B322bE41Dbb8055C7921FC9243b4e79");
         console.log(contract.events)
         // return
         contract.events.transfer(() => {
@@ -16,7 +16,7 @@ let ContractWebHooks = async () => {
             let transactionHash = event.transactionHash;
             let objects = event.returnValues;
             let data = {
-                message: objects._message,
+                message: objects.message,
                 address: objects.account,
                 transactionHash
             }
